@@ -830,8 +830,8 @@ html, body {
       position: relative;
       background: #ffffff;
       padding: 100px 24px 120px;
-      overflow-x: hidden;
       font-family: 'Inter', -apple-system, sans-serif;
+      overflow-x: clip;
     }
 
     /* Canvas background path — positioned absolute, full height */
@@ -1325,6 +1325,7 @@ html, body {
 .fbew {
   background: #fff;
   font-family: 'Inter', sans-serif;
+  overflow-x: clip;
   /* Kein overflow:hidden hier damit der carousel mask funktioniert */
 }
 
@@ -1695,7 +1696,7 @@ html, body {
       position: relative;
       background: #ffffff;
       padding: 100px 24px 120px;
-      overflow: hidden;
+       overflow-x: clip;
       font-family: 'Inter', -apple-system, sans-serif;
     }
 
@@ -1895,7 +1896,7 @@ html, body {
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
 
-    .fv-vergleich-v1 { background:#ffffff; padding:80px 24px 100px; font-family:'Inter',-apple-system,sans-serif; overflow:hidden; position:relative; }
+    .fv-vergleich-v1 { background:#ffffff; padding:80px 24px 100px; font-family:'Inter',-apple-system,sans-serif;  overflow-x: clip; position:relative; }
     .fv-vergleich-v1::before { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:radial-gradient(ellipse 60% 40% at 50% -10%,rgba(14,79,18,0.05) 0%,transparent 70%); pointer-events:none; }
     .fv-vergleich-v1 .fv-inner { max-width:1100px; margin:0 auto; }
     .fv-vergleich-v1 .fv-headline { text-align:center; margin-bottom:64px; }
@@ -2385,7 +2386,7 @@ html, body {
       padding: 90px 0 100px;
       font-family: 'Inter', -apple-system, sans-serif;
       box-sizing: border-box;
-      overflow: hidden;
+      overflow-x: clip;
     }
     .fsv4 *, .fsv4 *::before, .fsv4 *::after { box-sizing: border-box; }
 
@@ -2786,7 +2787,7 @@ html, body {
     .fn-footer-v2 {
       font-family: 'Inter', -apple-system, sans-serif;
       position: relative;
-      overflow: hidden;
+      overflow-x: clip;
       background: #071f08;
       padding: 0 24px 0;
     }
