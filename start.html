@@ -1,30 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finavio – Dein unabhängiger Finanzpartner</title>
-
-<style>
-html, body {
-  overflow-x: clip;
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  touch-action: pan-y;
-}
-</style>
-
-
-
-</head>
-<body>
-
-<div style="overflow-x: clip; width: 100%;">
-
-
-<!-- FINAVIO: HEADER + HERO SECTION -->
+  <!-- FINAVIO: HEADER + HERO SECTION -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -197,7 +172,7 @@ html, body {
   /* Video */
   .finavio-hero-v1 .fv-video-container {
     position: relative; width: 100%; max-width: 1200px;
-    margin: 0 auto; border-radius: 30px; overflow: hidden;
+    margin: 0 auto; border-radius: 30px; overflow: clip;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     animation: fv-scaleIn 0.8s ease-out 0.9s both;
   }
@@ -240,7 +215,7 @@ html, body {
     color: #fff; padding: 1.4rem 3.5rem; border-radius: 50px;
     font-size: 1.15rem; font-weight: 700; font-family: 'Inter', sans-serif;
     text-decoration: none; border: none; cursor: pointer;
-    margin: 2.5rem auto 0; position: relative; overflow: hidden;
+    margin: 2.5rem auto 0; position: relative; overflow: clip;
     transition: all 0.4s;
     box-shadow: 0 10px 40px rgba(14,79,18,0.3), 0 0 0 1px rgba(255,255,255,0.1) inset;
     animation: fv-fadeIn 0.8s ease-out 1s both;
@@ -274,7 +249,7 @@ html, body {
   /* === LOGO TICKER === */
   .finavio-hero-v1 .fv-logo-ticker {
     width: 100%; margin-top: 3rem;
-    overflow: hidden; position: relative;
+    overflow: clip; position: relative;
   }
   .finavio-hero-v1 .fv-logo-ticker::before,
   .finavio-hero-v1 .fv-logo-ticker::after {
@@ -487,7 +462,8 @@ html, body {
     position: relative;
     overflow: clip;
     text-align: center;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     box-sizing: border-box;
   }
 
@@ -673,7 +649,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: clip;
     border: 1px solid rgba(255,255,255,0.07);
   }
   .finavio-problem-v1 .fvp-illustration img {
@@ -831,8 +807,8 @@ html, body {
       position: relative;
       background: #ffffff;
       padding: 100px 24px 120px;
+      overflow-x: hidden;
       font-family: 'Inter', -apple-system, sans-serif;
-      overflow-x: clip;
     }
 
     /* Canvas background path — positioned absolute, full height */
@@ -1326,7 +1302,6 @@ html, body {
 .fbew {
   background: #fff;
   font-family: 'Inter', sans-serif;
-  overflow-x: clip;
   /* Kein overflow:hidden hier damit der carousel mask funktioniert */
 }
 
@@ -1453,7 +1428,7 @@ html, body {
 
 /* ─── CAROUSEL ──────────────────────────────────── */
 .fbew__reel {
-  overflow: hidden;
+  overflow: clip;
   /* fade edges */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
@@ -1697,7 +1672,7 @@ html, body {
       position: relative;
       background: #ffffff;
       padding: 100px 24px 120px;
-       overflow-x: clip;
+      overflow: clip;
       font-family: 'Inter', -apple-system, sans-serif;
     }
 
@@ -1763,7 +1738,7 @@ html, body {
     .zert-v1 .zert-scroll-wrap {
       position: relative;
       height: 560px;
-      overflow: hidden;
+      overflow: clip;
       mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
     }
@@ -1897,7 +1872,7 @@ html, body {
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
 
-    .fv-vergleich-v1 { background:#ffffff; padding:80px 24px 100px; font-family:'Inter',-apple-system,sans-serif;  overflow-x: clip; position:relative; }
+    .fv-vergleich-v1 { background:#ffffff; padding:80px 24px 100px; font-family:'Inter',-apple-system,sans-serif; overflow:hidden; position:relative; }
     .fv-vergleich-v1::before { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:radial-gradient(ellipse 60% 40% at 50% -10%,rgba(14,79,18,0.05) 0%,transparent 70%); pointer-events:none; }
     .fv-vergleich-v1 .fv-inner { max-width:1100px; margin:0 auto; }
     .fv-vergleich-v1 .fv-headline { text-align:center; margin-bottom:64px; }
@@ -2073,7 +2048,6 @@ html, body {
 
     .ablauf-section-v1 {
       background: #FFFFFF;
-      overflow-x: clip;
       padding: 80px 24px;
       font-family: 'Inter', -apple-system, sans-serif;
       box-sizing: border-box;
@@ -2387,7 +2361,7 @@ html, body {
       padding: 90px 0 100px;
       font-family: 'Inter', -apple-system, sans-serif;
       box-sizing: border-box;
-      overflow-x: clip;
+      overflow: clip;
     }
     .fsv4 *, .fsv4 *::before, .fsv4 *::after { box-sizing: border-box; }
 
@@ -2429,7 +2403,7 @@ html, body {
     .fsv4-photo-wrap {
       position: relative;
       border-radius: 20px;
-      overflow: hidden;
+      overflow: clip;
       aspect-ratio: 3 / 2;
       width: 100%;
       background: #e0e0e0;
@@ -2674,7 +2648,6 @@ html, body {
       background: #FFFFFF;
       padding: 80px 24px 80px;
       font-family: 'Inter', -apple-system, sans-serif;
-      overflow-x: clip;
     }
 
     .fn-cta-v2 .cta-box {
@@ -2685,7 +2658,7 @@ html, body {
       padding: 80px 48px;
       text-align: center;
       position: relative;
-      overflow: hidden;
+      overflow: clip;
       opacity: 0;
       transform: translateY(32px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -2789,7 +2762,7 @@ html, body {
     .fn-footer-v2 {
       font-family: 'Inter', -apple-system, sans-serif;
       position: relative;
-      overflow-x: clip;
+      overflow: clip;
       background: #071f08;
       padding: 0 24px 0;
     }
@@ -2946,8 +2919,3 @@ html, body {
     })();
   </script>
 </footer>
-
-</div>
-
-  </body>
-</html>
