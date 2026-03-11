@@ -12,6 +12,7 @@ html, body {
   width: 100%;
   max-width: 100%;
   position: relative;
+  touch-action: pan-y;
 }
 </style>
 
@@ -616,7 +617,7 @@ html, body {
     -webkit-backdrop-filter: blur(12px);
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
@@ -1392,7 +1393,7 @@ html, body {
   border-radius: 24px;
   padding: 44px 36px;
   /* overflow hidden so carousel doesn't bleed outside rounded card */
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* ─── LEFT PANEL ────────────────────────────────── */
@@ -2673,6 +2674,7 @@ html, body {
       background: #FFFFFF;
       padding: 80px 24px 80px;
       font-family: 'Inter', -apple-system, sans-serif;
+      overflow-x: clip;
     }
 
     .fn-cta-v2 .cta-box {
