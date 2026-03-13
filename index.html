@@ -364,19 +364,24 @@ html, body {
   <!-- Beispiel: .../embed/iframe/abc123xyz                         -->
   <!-- ============================================================ -->
 
-  <div class="fv-video-wrapper">
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/ccxul2mixp.js" async type="module"></script>
-  <style>
-    wistia-player[media-id='ccxul2mixp']:not(:defined) { 
-      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ccxul2mixp/swatch'); 
-      display: block; 
-      filter: blur(5px); 
-      padding-top: 56.25%; 
-    }
-  </style>
-  <wistia-player media-id="ccxul2mixp" aspect="1.7777777777777777"></wistia-player>
-</div>
+  <div class="fv-video-container">
+    <div class="fv-video-wrapper">
+      <script src="https://fast.wistia.com/player.js" async></script>
+      <script src="https://fast.wistia.com/embed/ccxul2mixp.js" async type="module"></script>
+      <style>
+        wistia-player[media-id='ccxul2mixp']:not(:defined) {
+          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ccxul2mixp/swatch');
+          display: block; filter: blur(5px); padding-top: 56.25%;
+        }
+        wistia-player { width: 100%; height: 100%; display: block; }
+      </style>
+      <wistia-player media-id="ccxul2mixp" aspect="1.7777777777777777"></wistia-player>
+    </div>
+  </div>
+
+
+
+  
   <!-- ============================================================ -->
 
   <a href="https://form.typeform.com/to/IQSOzdKC" target="_blank" class="fv-cta-button">
