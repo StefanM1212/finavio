@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finavio – Dein unabhängiger Finanzpartner</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Finde sofort die perfekte Finanzlösung | Finavio</title>
+  <meta name="description" content="Finavio bringt dich kostenlos & unverbindlich mit geprüften Finanzexperten zusammen – für die perfekte Lösung bei Geldanlage, Altersvorsorge, Berufsunfähigkeit & Steuern. Jetzt Experten anfragen.">
+  <meta property="og:title" content="Finde sofort die perfekte Finanzlösung | Finavio">
+  <meta property="og:description" content="Kostenlos & unverbindlich mit geprüften Finanzexperten zusammenkommen – für Geldanlage, Altersvorsorge, BU & Steuern.">
+  <meta property="og:type" content="website">
 <style>
 html, body {
   overflow-x: clip;
@@ -15,6 +18,8 @@ html, body {
   margin: 0;
 }
 </style>
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/ccxul2mixp.js" async type="module"></script>
 </head>
 <body>
 <div style="overflow-x: clip; width: 100%;">
@@ -85,12 +90,7 @@ html, body {
 
 
 
-.finavio-hero-v1 .fv-video-wrapper wistia-player {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-}
+
 
 
 
@@ -172,6 +172,18 @@ html, body {
     font-weight: 400; line-height: 1.7;
     animation: fv-fadeIn 0.8s ease-out 0.7s both;
   }
+  /* Subheadline-Box: reserviert feste Höhe (längste Phrase), damit der
+     Typewriter-Effekt das darunterliegende Video nicht verschiebt. */
+  .finavio-hero-v1 .fv-subtitle-wrap {
+    position: relative; max-width: 900px; margin: 0 auto 2rem;
+  }
+  .finavio-hero-v1 .fv-subtitle-wrap .fv-subtitle {
+    max-width: 100%; margin: 0;
+  }
+  .finavio-hero-v1 .fv-subtitle-ghost { visibility: hidden; }
+  .finavio-hero-v1 .fv-subtitle-live {
+    position: absolute; top: 0; left: 0; right: 0;
+  }
   .finavio-hero-v1 .fv-subtitle strong { color: #000; font-weight: 700; }
   .finavio-hero-v1 .fv-typewriter {
     color: #0E4F12; font-weight: 700;
@@ -214,8 +226,13 @@ html, body {
     background: linear-gradient(135deg, #1a5a1e 0%, #0a3d0e 100%);
   }
   .finavio-hero-v1 .fv-video-wrapper video,
-  .finavio-hero-v1 .fv-video-wrapper iframe {
-    width: 100%; height: 100%; object-fit: cover;
+  .finavio-hero-v1 .fv-video-wrapper iframe,
+  .finavio-hero-v1 .fv-video-wrapper wistia-player {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .finavio-hero-v1 .fv-video-wrapper wistia-player[media-id='ccxul2mixp']:not(:defined) {
+    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ccxul2mixp/swatch');
+    filter: blur(5px);
   }
   .finavio-hero-v1 .fv-play-button {
     position: absolute; top: 50%; left: 50%;
@@ -250,6 +267,7 @@ html, body {
     content: ''; position: absolute; inset: 0; border-radius: 50px; padding: 2px;
     background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.05));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
   }
   .finavio-hero-v1 .fv-cta-button::before {
@@ -337,7 +355,7 @@ html, body {
       <li><a href="#" data-scroll-to="zert-v1">Zertifizierung</a></li>
       <li><a href="#" data-scroll-to="fbew">Bewertungen</a></li>
       <li>
-        <a href="https://finavio-anfrage.fillout.com/offen" target="_blank" class="fv-cta-nav">
+        <a href="#" data-fv-lead class="fv-cta-nav">
           Experten kostenfrei anfragen →
         </a>
       </li>
@@ -351,14 +369,20 @@ html, body {
   <div class="fv-tagline">Trifft nie wieder eine falsche Finanzentscheidung</div>
 
   <h1 class="fv-headline">
-    Die <span class="fv-highlight">Premium-Alternative</span><br>
-    zu Vergleichsportalen.
+    Für jedes Finanzthema sofort<br>
+    den <span class="fv-highlight">Marktführer</span> finden
   </h1>
 
-  <p class="fv-subtitle">
-    Wir nutzen unsere Einblicke aus über <strong>1.500 Finanzunternehmen</strong> und vermitteln dich
-    kostenlos zu einem geprüften Experten, der <span id="fv-typewriter" class="fv-typewriter"></span>
-  </p>
+  <div class="fv-subtitle-wrap">
+    <p class="fv-subtitle fv-subtitle-ghost" aria-hidden="true">
+      Wir nutzen unsere Einblicke aus über <strong>1.500 Finanzunternehmen</strong> und vermitteln dich
+      kostenlos zu einem geprüften Experten, der deinen Vermögensaufbau wissenschaftlich fundiert entwickelt.
+    </p>
+    <p class="fv-subtitle fv-subtitle-live">
+      Wir nutzen unsere Einblicke aus über <strong>1.500 Finanzunternehmen</strong> und vermitteln dich
+      kostenlos zu einem geprüften Experten, der <span id="fv-typewriter" class="fv-typewriter"></span>
+    </p>
+  </div>
 
   <div class="fv-time-invest">
     <span> 3 Minuten Zeit-Invest, für ein restliches Leben mit korrekten Finanzentscheidungen</span>
@@ -366,31 +390,16 @@ html, body {
   </div>
 
   <!-- ============================================================ -->
-  <!-- WISTIA VIDEO – nur DEINE-VIDEO-ID ersetzen                   -->
-  <!-- Beispiel: .../embed/iframe/abc123xyz                         -->
+  <!-- WISTIA VIDEO – media-id: ccxul2mixp                          -->
   <!-- ============================================================ -->
-
   <div class="fv-video-container">
     <div class="fv-video-wrapper">
-      <script src="https://fast.wistia.com/player.js" async></script>
-      <script src="https://fast.wistia.com/embed/ccxul2mixp.js" async type="module"></script>
-      <style>
-        wistia-player[media-id='ccxul2mixp']:not(:defined) {
-          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ccxul2mixp/swatch');
-          display: block; filter: blur(5px); padding-top: 56.25%;
-        }
-        wistia-player { width: 100%; height: 100%; display: block; }
-      </style>
       <wistia-player media-id="ccxul2mixp" aspect="1.7777777777777777"></wistia-player>
     </div>
   </div>
-
-
-
-  
   <!-- ============================================================ -->
 
-  <a href="https://finavio-anfrage.fillout.com/offen" target="_blank" class="fv-cta-button">
+  <a href="#" data-fv-lead class="fv-cta-button">
     <span>Experten kostenlos anfragen</span>
   </a>
 
@@ -1064,7 +1073,7 @@ html, body {
 
     <div class="ergebnisse-row" id="ergebnisse-row-1">
       <div class="ergebnisse-img-wrap" id="ergebnisse-wrap-1">
-        <img src="sek3gehaltsabrechnung.png" alt="Steuerrückerstattung Beispiel" />
+        <img src="steueuerbescheid.webp" alt="Steuerbescheid – 97.000 € Rückerstattung" loading="lazy" />
         <span class="img-badge">Fallbeispiel 01 – Steuer</span>
       </div>
       <div class="ergebnisse-text">
@@ -1082,7 +1091,7 @@ html, body {
             durch steueroptimierte Kapitalanlage &amp; Immobilienstrategie
           </span>
         </div>
-        <a href="https://finavio-anfrage.fillout.com/offen" target="_blank" class="cta-btn">Auch ich will mehr rausholen <span class="btn-arrow">→</span></a>
+        <a href="#" data-fv-lead data-fv-topic="geldanlage" class="cta-btn">Auch ich will mehr rausholen <span class="btn-arrow">→</span></a>
       </div>
     </div>
 
@@ -1108,7 +1117,7 @@ html, body {
             dasselbe Geld – nur ohne unnötige Gebühren
           </span>
         </div>
-        <a href="https://finavio-anfrage.fillout.com/offen" target="_blank" class="cta-btn">Mein Potenzial berechnen <span class="btn-arrow">→</span></a>
+        <a href="#" data-fv-lead data-fv-topic="altersvorsorge" class="cta-btn">Mein Potenzial berechnen <span class="btn-arrow">→</span></a>
       </div>
     </div>
 
@@ -1134,7 +1143,7 @@ html, body {
             höchste Sicherheitsklasse · alle Risikoklauseln geschlossen · volle Leistung im BU-Fall
           </span>
         </div>
-        <a href="https://finavio-anfrage.fillout.com/offen" target="_blank" class="cta-btn">Meine BU richtig absichern <span class="btn-arrow">→</span></a>
+        <a href="#" data-fv-lead data-fv-topic="bu" class="cta-btn">Meine BU richtig absichern <span class="btn-arrow">→</span></a>
       </div>
     </div>
 
@@ -2327,7 +2336,7 @@ html, body {
       </div>
 
       <div class="ablauf-cta">
-        <a href="https://finavio-anfrage.fillout.com/offen" class="btn-ablauf-v1">Jetzt kostenlos Experten kennenlernen</a>
+        <a href="#" data-fv-lead class="btn-ablauf-v1">Jetzt kostenlos Experten kennenlernen</a>
         <p class="ablauf-note">✓ Komplett kostenlos &nbsp;·&nbsp; ✓ Unverbindlich &nbsp;·&nbsp; ✓ Kein Risiko</p>
       </div>
     </div>
@@ -2758,7 +2767,7 @@ html, body {
     <p class="cta-label">Kostenlos & unverbindlich</p>
     <h2 class="cta-h2">Hol dir jetzt<br><em>deinen Experten</em></h2>
     <p class="cta-sub">Über 376 Menschen haben bereits über Finavio den passenden Finanzexperten gefunden – ohne Stress, ohne Risiko.</p>
-    <a href="https://finavio-anfrage.fillout.com/offen" class="cta-btn">Jetzt kostenlos Experten anfragen →</a>
+    <a href="#" data-fv-lead class="cta-btn">Jetzt kostenlos Experten anfragen →</a>
     <p class="cta-note">✓ Komplett kostenlos &nbsp;·&nbsp; ✓ Unverbindlich &nbsp;·&nbsp; ✓ Kein Risiko</p>
   </div>
 
@@ -2904,7 +2913,7 @@ html, body {
             <li><a href="#" data-scroll-to="ergebnisse-v3">Beispiele</a></li>
             <li><a href="#" data-scroll-to="zert-v1">Zertifizierung</a></li>
             <li><a href="#" data-scroll-to="fbew">Bewertungen</a></li>
-            <li><a href="https://form.typeform.com/to/IQSOzdKC" target="_blank">Experten anfragen</a></li>
+            <li><a href="#" data-fv-lead>Experten anfragen</a></li>
           </ul>
         </div>
 
@@ -2923,6 +2932,7 @@ html, body {
         <div class="ft-legal">
           <a href="datenschutz.html">Datenschutz</a>
           <a href="impressum.html">Impressum</a>
+          <a href="#" data-fv-consent-open>Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
@@ -2947,3 +2957,9 @@ html, body {
     })();
   </script>
 </footer>
+
+<script src="lead-modal.js"></script>
+<script src="consent.js"></script>
+</div>
+</body>
+</html>
